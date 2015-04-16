@@ -12,10 +12,17 @@ calculation(masterArray);
 function calculation (array){
 	for (var i = 0; i < array.length; i++){
 		for (var j = 0; j < array[i].length; j++){
-			array[i][j] = (array[i][j] + 1) * 2;
+			array[i][j] = addOne(array[i][j]);
+			array[i][j] = timesTwo(array[i][j]);
 		}
 		console.log(array[i]);
 	}
 }
 
+function addOne (val){
+	return val + 1;
+}
 
+function timesTwo (val){
+	return val * 2;
+}
